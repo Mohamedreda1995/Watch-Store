@@ -1,0 +1,308 @@
+/* 
+.sm	@media (min-width: 640px) { ... }	≥640px
+.md	@media screen and (min-width: 768px)	≥768px
+.lg	@media screen and (min-width: 1024px)	≥1024px
+.xl	@media screen and (min-width: 1280px)	≥1280px
+.xxl @media screen and (min-width: 1536px)	≥1536px */
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+/* For desktop */
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .nav-item {
+    display: none;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 600px) {
+  .navbar i {
+    display: none;
+  }
+
+  #home .container {
+    display: flex;
+    flex-direction: row;
+
+    h1 {
+      font-size: 30px;
+      line-height: 3rem;
+    }
+  }
+
+  #about .product-contain {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #choice .container {
+    display: flex;
+    flex-direction: row;
+
+    h2 {
+      font-size: 30px;
+      line-height: 3rem;
+    }
+  }
+
+  #choice .reverse {
+    flex-direction: row-reverse;
+  }
+
+
+  .sm-100 {
+    width: 100%;
+  }
+
+  .sm-50 {
+    width: 50%;
+  }
+
+  .sm-33 {
+    width: 33.3333%;
+  }
+
+  .sm-25 {
+    width: 25%;
+  }
+
+  .sm-20 {
+    width: 20%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+  #home .container {
+    justify-content: space-around;
+    align-items: center;
+
+    h1 {
+      font-size: 40px;
+      line-height: 4rem;
+    }
+  }
+
+  #about .product-contain {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .last {
+    display: flex;
+  }
+
+  #product {
+
+    .container {
+
+      .watches {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .parent {
+          margin: 0 1em;
+        }
+
+      }
+    }
+  }
+
+  #choice .container {
+    justify-content: space-around;
+    align-items: center;
+
+    h2 {
+      font-size: 40px;
+      line-height: 4rem;
+    }
+  }
+
+  .footer {
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+
+  .md-100 {
+    width: 100%;
+  }
+
+  .md-50 {
+    width: 50%;
+  }
+
+  .md-33 {
+    width: 33.3333%;
+  }
+
+  .md-25 {
+    width: 25%;
+  }
+
+  .md-20 {
+    width: 20%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+  #home .container {
+    justify-content: space-around;
+    align-items: center;
+
+    h1 {
+      font-size: 50px;
+      line-height: 5rem;
+    }
+  }
+
+  #about .product-contain {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  #choice .container {
+    justify-content: space-around;
+    align-items: center;
+
+    h2 {
+      font-size: 35px;
+      line-height: 3rem;
+    }
+  }
+
+  .lg-100 {
+    width: 100%;
+  }
+
+  .lg-60 {
+    width: 60%;
+  }
+
+  .lg-50 {
+    width: 50%;
+  }
+
+
+  .lg-33 {
+    width: 33.3333%;
+  }
+
+  .lg-25 {
+    width: 25%;
+  }
+
+  .lg-20 {
+    width: 20%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .xl-100 {
+    width: 100%;
+    align-items: center;
+
+    h1 {
+      font-size: 60px;
+      line-height: 6rem;
+    }
+  }
+
+  #about .product-contain {
+    display: flex;
+    justify-content: space-around;
+    /* flex-wrap: wrap; */
+    align-items: center;
+  }
+
+  .last {
+    flex-direction: column;
+  }
+
+  .xl-50 {
+    width: 50%;
+  }
+
+  .xl-33 {
+    width: 33.3333%;
+  }
+
+  .xl-25 {
+    width: 25%;
+  }
+
+  .xl-20 {
+    width: 20%;
+  }
+}

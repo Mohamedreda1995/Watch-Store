@@ -1,0 +1,449 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: black; */
+    /* height: 312.5rem; */
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Bruno Ace", sans-serif;
+
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ==== start navbar ==== */
+
+.navbar {
+    /* background-color: tomato; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .625rem;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 1px 2px 15px rgb(158, 158, 178);
+
+    .nav-item {
+        /* background-color: aqua; */
+        /* width: 60%; */
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+
+            li {
+                /* background-color: violet; */
+                padding: .3125rem;
+                transition: all 0.2s ease;
+
+
+                a {
+                    color: black;
+                    transition: all 0.2s ease;
+                }
+            }
+        }
+    }
+
+    i {
+        cursor: pointer;
+        font-size: 1.25rem;
+        transition: all 0.2s ease;
+        padding: .4375rem;
+    }
+}
+
+.navbar i:hover {
+    background-color: #FF2020;
+    border-radius: 3px;
+    color: white;
+}
+
+.nav-item ul li:hover {
+    scale: 1.1;
+    background-color: #FF2020;
+    border-radius: 3px;
+
+    a {
+        color: white;
+    }
+}
+
+
+
+/* ==== end navbar ==== */
+
+/* ==== start home ==== */
+
+#home {
+    background-color: rgb(240, 247, 247);
+}
+
+#home .container {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-block: 50px;
+
+    .head-item2 img {
+        width: 100%;
+    }
+
+    .head-item1 {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            text-align: center;
+            font-weight: 800;
+            /* line-height: 3rem; */
+        }
+
+        p {
+            font-weight: 500;
+            line-height: 1.9rem;
+        }
+
+        button {
+            padding: 1rem 1.25rem;
+            font-size: 1rem;
+            /* align-self: center; */
+            position: relative;
+            width: 120px;
+            background-color: #FF2020;
+            border: none;
+            border-radius: .3125rem;
+            cursor: pointer;
+
+            span {
+                position: absolute;
+                top: 7px;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                color: white;
+            }
+        }
+
+        button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            background-color: rgb(59, 58, 58);
+            transition: all 0.5s ease;
+            border-radius: .3125rem;
+
+        }
+
+        button:hover::before {
+            width: 100%;
+            border-radius: .3125rem;
+        }
+    }
+}
+
+/* ==== end home ==== */
+
+/* ==== start About ==== */
+
+#about .container {
+    padding-block: 1.25rem;
+
+    .product-item {
+        text-align: center;
+        padding: 1.25rem;
+        margin: 0;
+
+        .scale {
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                display: block;
+                transition: all 0.5s ease;
+            }
+
+            img:hover {
+                scale: 1.1;
+            }
+        }
+
+        span {
+            color: #FF2020;
+        }
+    }
+}
+
+/* ==== end About ==== */
+
+/* ==== start gallery ==== */
+
+.gallery {
+    padding-block: 1.25rem;
+
+    .gallery-item {
+        margin: .9375rem;
+        overflow: hidden;
+    }
+
+    .last div {
+        margin: .9375rem;
+        overflow: hidden;
+    }
+
+    img {
+        width: 100%;
+        transition: all 0.5s ease;
+        cursor: pointer;
+    }
+
+    img:hover {
+        scale: 1.1;
+    }
+
+}
+
+/* ==== end gallery ==== */
+
+/* ==== start product ==== */
+
+#product {
+    text-align: center;
+    padding-block: 4rem;
+
+    p {
+        font-weight: bold;
+    }
+
+    span {
+        font-weight: bold;
+    }
+
+    .container .watches {
+        padding-block: 1.875rem;
+
+        .parent {
+            /* background-color: brown; */
+            /* position: relative; */
+            margin-block: .9375rem;
+
+            .after {
+                position: relative;
+            }
+
+            i {
+                position: absolute;
+                top: .625rem;
+                right: .625rem;
+                cursor: pointer;
+                display: block;
+                font-size: 1.9rem;
+            }
+
+            img {
+                width: 100%;
+                display: block;
+                cursor: pointer;
+            }
+
+            .after:hover::after {
+                content: "Add to cart";
+                height: 50px;
+                color: white;
+                font-size: 1.5rem;
+                padding-top: 10px;
+
+            }
+        }
+
+        .after::after {
+            content: "";
+            position: absolute;
+            background-color: #FF2020;
+            cursor: pointer;
+            height: 5px;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            /* height: 50px; */
+            transition: all 0.5s ease;
+            /* visibility: visible; */
+        }
+    }
+}
+
+/* ==== end product ==== */
+
+
+/* ==== start choice ==== */
+
+#choice .container {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-block: 50px;
+
+    .choice-item2 img {
+        width: 100%;
+    }
+
+    .choice-item1 {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            /* text-align: center; */
+            font-weight: 800;
+            /* line-height: 3rem; */
+        }
+
+        p {
+            font-weight: 500;
+            line-height: 1.9rem;
+        }
+
+        button {
+            padding: 1.5rem 2.5rem;
+            font-size: 1.25rem;
+            /* align-self: center; */
+            position: relative;
+            width: 170px;
+            background-color: #FF2020;
+            border: none;
+            border-radius: .3125rem;
+            cursor: pointer;
+
+            span {
+                position: absolute;
+                top: 11px;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                color: white;
+            }
+        }
+
+        button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            background-color: rgb(59, 58, 58);
+            transition: all 0.5s ease;
+            border-radius: .3125rem;
+
+        }
+
+        button:hover::before {
+            width: 100%;
+            border-radius: .3125rem;
+        }
+    }
+}
+
+/* ==== end choice ==== */
+
+/* ==== alerts ==== */
+
+.alerts {
+    padding-block: 1.875rem;
+
+    .container {
+        padding: 1.25rem;
+        background-color: #FF2020;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .alert {
+
+            i {
+                color: white;
+                font-size: 32px;
+            }
+
+            p {
+                color: white;
+                font-size: 1rem;
+            }
+
+        }
+    }
+}
+
+/* ==== alerts ==== */
+
+/*  ===== footer ===== */
+
+.footer {
+    padding-block: 1.875rem;
+
+    .container {
+        p {
+            color: rgb(158, 158, 178);
+
+        }
+
+        ul {
+            color: rgb(158, 158, 178);
+
+            li {
+                cursor: pointer;
+                margin-block: 10px;
+            }
+        }
+    }
+
+    .copyright {
+        text-align: center;
+        margin-block: 6.25rem;
+        
+
+        span {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #FF2020;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+/*  ===== footer ===== */
